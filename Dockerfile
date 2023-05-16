@@ -15,12 +15,13 @@ RUN npm install -g yarn
 
 
 WORKDIR ${ROOT}
-COPY . ${ROOT}
+COPY Gemfile ${ROOT}
+COPY Gemfile.lock ${ROOT}
 
 RUN bundle install
 COPY . ${ROOT}
-RUN rails db:create && rails db:migrate
-RUN rails db:seed
+# RUN rails db:create && rails db:migrate
+# RUN rails db:seed
 
 
 

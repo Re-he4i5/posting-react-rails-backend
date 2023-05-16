@@ -18,3 +18,5 @@ WORKDIR ${ROOT}
 COPY . ${ROOT}
 
 RUN bundle install
+RUN rails db:create && rails db:migrate
+# RUN rails db:seed

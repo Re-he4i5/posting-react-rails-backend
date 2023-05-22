@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def create
     post = Post.new(post_params)
     post.save
-    redirect_to post
+    render json: post
   end
 
   def show

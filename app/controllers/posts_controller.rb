@@ -5,9 +5,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Object.new(post_params)
-    object.save
-    redirect_to object
+    post = Post.new(post_params)
+    post.save
+    redirect_to post
   end
 
   def show

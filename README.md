@@ -1,12 +1,15 @@
 # Back
+
 ## 仕様
-- rails-apiで作成
-- CRUDとサンプルデータをseedに記載
+
+- rails-api で作成
+- CRUD とサンプルデータを seed に記載
 
 ## 実行手順
-- docker compose build 
-- docker compose up (-d)
-- コンテナ内でrails db:migrate、rails db:seed
+
+- `docker compose build`
+- `docker compose up (-d)`
+- コンテナ内で`rails db:migrate、rails db:seed`
 
 # Front
 

@@ -1,7 +1,7 @@
 # rubyの指定
 FROM ruby:3.1.2
 
-ENV ROOT="/posting-react-rails-backend"
+WORKDIR /usr/src
 
 # railsのインストール
 RUN gem install rails -v 6.1.4
@@ -14,12 +14,12 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh && bas
 RUN npm install -g yarn
 
 
-WORKDIR ${ROOT}
-COPY Gemfile ${ROOT}
-COPY Gemfile.lock ${ROOT}
+WORKDIR /usr/src
+COPY Gemfile /usr/src
+COPY Gemfile.lock /usr/src
 
 RUN bundle install
-COPY . ${ROOT}
+COPY . /usr/src
 # RUN rails db:create && rails db:migrate
 # RUN rails db:seed
 

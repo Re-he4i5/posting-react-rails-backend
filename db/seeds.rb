@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 20.times do |n|
-  Post.create(
+  Book.create(
       title: "サンプル#{n}",
       body: "これはseedで作成したものです。"
   )
